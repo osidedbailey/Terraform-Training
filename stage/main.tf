@@ -80,14 +80,6 @@ resource "aws_elb" "example" {
 	}
 }
 
-variable "server_port" {
-			description = "The port the server will use for HTTP requests"
-			default = 8080
-}
-
-output "elb_dns_name" {
-		value = "${aws_elb.example.dns_name}"
-}
 
 resource "aws_security_group" "elb" {
 	name = "terraform-example-elb-dave"
